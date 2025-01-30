@@ -28,3 +28,13 @@ jobs:
         with:
           name: index.m3u
           path: output/index.m3u
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -f output/index.m3u
+          if ! git diff --staged --quiet; then
+            git commit -m "Github Action Auto Updated index.m3u"
+            git push
+          fi
