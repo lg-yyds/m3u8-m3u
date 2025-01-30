@@ -19,9 +19,12 @@ jobs:
         run: |
           curl -o output/index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8
 
+      - name: Copy original index.m3u8
+        run: cp output/index.m3u8 output/index_copy.m3u8
+
       - name: Convert to index.m3u
         run: |
-          grep -v "^#EXT" output/index.m3u8 > output/index.m3u
+          grep -E "^#EXTINF|^http" output/index.m3u8 > output/index.m3u
 
       - name: Upload converted file
         uses: actions/upload-artifact@v4
@@ -33,8 +36,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add -f output/index.m3u
+          git add -f output/index.m3u output/index_copy.m3u8
           if ! git diff --staged --quiet; then
-            git commit -m "Github Action Auto Updated index.m3u"
+            git commit -m "Github Action Auto Updated index.m3u and index_copy.m3u8"
             git push
           fi
