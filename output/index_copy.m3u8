@@ -173,8 +173,8 @@ http://4gtv.mumi.rip:9877/118/4gtv-4gtv045/index.m3u8
 http://4gtv.mumi.rip:9877/215/4gtv-live027/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-4gtv013" tvg-name="視納華仁紀實頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv013_mobile.png",視納華仁紀實頻道
 http://4gtv.mumi.rip:9877/38/4gtv-4gtv013/index.m3u8
-#EXTINF:-1,tvg-id="4gtv-live023" tvg-name="影迷數位紀實台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live023_mobile.png",影迷數位紀實台
-http://4gtv.mumi.rip:9877/212/4gtv-live023/index.m3u8
+#EXTINF:-1,tvg-id="litv-ftv15" tvg-name="影迷數位紀實台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live023_mobile.png",影迷數位紀實台
+http://4gtv.mumi.rip:9877/445/litv-ftv15/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live144" tvg-name="金光布袋戲" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live144_mobile.png",金光布袋戲
 http://4gtv.mumi.rip:9877/236/4gtv-live144/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live138" tvg-name="ROCK Action" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/live138_mobile.png",ROCK Action
