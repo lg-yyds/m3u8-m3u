@@ -26,13 +26,14 @@ jobs:
 
     - name: Convert m3u8 to txt and extract info
       run: |
-        # 使用 awk 提取频道名称（#EXTINF 后的字段）和 URL 地址（紧跟其后的行）
+        # 使用 sed 和 awk 提取频道名称和 m3u8 URL
         awk '/#EXTINF:/ { 
-            # 提取频道名称
-            name = substr($0, index($0,$2));  
+            # 使用正则表达式提取频道名称
+            if (match($0, /tvg-name="([^"]+)"/, arr)) {
+                name = arr[1];  # 提取频道名称
+            }
             getline;  # 读取下一行，即 m3u8 URL
-            # 输出格式：频道名称, m3u8 URL
-            print name "," $0
+            print name "," $0  # 输出格式化后的频道名称和 URL
         }' output/index.m3u8 > output/index.txt
 
     - name: Upload converted file
