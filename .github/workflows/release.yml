@@ -1,4 +1,4 @@
-name: Convert m3u8 to txt
+name: Convert m3u8 to txt and Push
 
 on:
   schedule:
@@ -29,8 +29,24 @@ jobs:
         # 使用 sed 过滤掉注释和无效行，然后格式化输出为 CSV
         sed '/^#/d' output/index.m3u8 | awk -F',' '{print $1 "," $2}' > output/index.txt
 
-    - name: Upload output files
-      uses: actions/upload-artifact@v4  # 更新为 v4
+    - name: Upload converted file
+      uses: actions/upload-artifact@v4
       with:
-        name: m3u8-output
+        name: index.m3u
+        path: output/index.m3u8  # 上传 output/index.m3u8 文件
+
+    - name: Upload index.txt file
+      uses: actions/upload-artifact@v4
+      with:
+        name: index-txt
         path: output/index.txt  # 上传 output/index.txt 文件
+
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add -f output/index.m3u8 output/index.txt  # 将 index.m3u8 和 index.txt 添加到暂存区
+        if ! git diff --staged --quiet; then  # 如果文件有变化
+          git commit -m "Github Action Auto Updated index.m3u8 and index.txt"
+          git push
+        fi
