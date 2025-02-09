@@ -1,9 +1,9 @@
-name: Download and Convert M3U8
+name: Convert m3u8 to txt
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # 每小时运行一次
+    - cron: '0 * * * *'  # 每小时执行一次
+  workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
   convert_m3u8:
@@ -13,33 +13,21 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3  # 克隆仓库
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'  # 安装 Python 3.9
-
     - name: Install dependencies
       run: |
-        pip install requests  # 安装 requests 库，用于获取 m3u8 文件
+        # 安装 curl 等必要工具
+        sudo apt-get update
+        sudo apt-get install -y curl
 
     - name: Download index.m3u8
       run: |
         mkdir -p output  # 创建 output 文件夹
-        curl -o index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8  # 下载 m3u8 文件
+        curl -o output/index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8  # 下载 m3u8 文件
 
     - name: Convert m3u8 to txt
       run: |
-        python3 -c '
-import requests
-
-# 下载 m3u8 文件的内容
-url = "http://4gtv.mumi.rip:9877/index.m3u8"
-response = requests.get(url)
-
-# 将内容保存到 output 文件夹中的 txt 文件
-with open("output/index.txt", "w") as file:
-    file.write(response.text)
-        '  # 使用 Python 代码将 m3u8 内容写入 txt 文件
+        # 使用 awk 进行格式化，将每一行转换为 CSV 格式（频道名, m3u8 URL）
+        awk -F',' '{print $1 "," $2}' output/index.m3u8 > output/index.txt
 
     - name: Upload output files
       uses: actions/upload-artifact@v3
