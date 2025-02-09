@@ -24,6 +24,11 @@ jobs:
         mkdir -p output  # 创建 output 文件夹
         curl -o output/index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8  # 下载 m3u8 文件
 
+    - name: Convert m3u8 to txt
+      run: |
+        # 使用 awk 进行格式化，将每一行转换为 CSV 格式（频道名, m3u8 URL）
+        awk -F',' '{print $1 "," $2}' output/index.m3u8 > output/index.txt
+
     - name: Convert m3u8 to txt and clean up
       run: |
         # 使用 sed 过滤掉注释和无效行，然后格式化输出为 CSV
