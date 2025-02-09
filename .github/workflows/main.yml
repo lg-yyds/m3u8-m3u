@@ -1,43 +1,51 @@
-name: Download and Convert M3U8
+name: Convert m3u8 to txt
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # 每小时运行一次
+    - cron: '0 * * * *'  # 每小时执行一次，可根据需求调整
+  workflow_dispatch:  # 手动触发工作流
 
 jobs:
-  download_convert:
-    runs-on: ubuntu-latest
+  convert_m3u8:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 环境
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v3  # 克隆仓库
 
-      - name: Create output directory
-        run: mkdir -p output
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # 安装 Python 3.9
 
-      - name: Download index.m3u8
-        run: |
-          curl -o output/index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip  # 升级 pip
+        pip install requests  # 安装 requests 库
 
-      - name: Copy original index.m3u8
-        run: cp output/index.m3u8 output/index_copy.m3u8
+    - name: Download index.m3u8
+      run: |
+        mkdir -p output  # 创建 output 文件夹
+        curl -o output/index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8  # 下载 m3u8 文件
 
-      - name: Convert to index.m3u
-        run: |
-          grep -E "^#EXTINF|^http" output/index.m3u8 > output/index.m3u
+    - name: Convert m3u8 to txt
+      run: |
+        python3 -c '
+import os
 
-      - name: Upload converted file
-        uses: actions/upload-artifact@v4
-        with:
-          name: index.m3u
-          path: output/index.m3u
+# 读取 m3u8 文件内容
+m3u8_file_path = "output/index.m3u8"
+with open(m3u8_file_path, "r") as file:
+    m3u8_content = file.read()
 
-      - name: Commit and push if changed
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add -f output/index.m3u output/index_copy.m3u8
-          if ! git diff --staged --quiet; then
-            git commit -m "Github Action Auto Updated index.m3u and index_copy.m3u8"
-            git push
-          fi
+# 将内容写入 txt 文件
+txt_file_path = "output/index.txt"
+with open(txt_file_path, "w") as txt_file:
+    txt_file.write(m3u8_content)
+        '  # 使用 Python 脚本将 m3u8 内容写入 txt 文件
+
+    - name: Upload output files
+      uses: actions/upload-artifact@v3
+      with:
+        name: m3u8-output
+        path: output/index.txt  # 上传 output/index.txt 文件
