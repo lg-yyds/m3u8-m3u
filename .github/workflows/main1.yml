@@ -2,8 +2,8 @@ name: Convert m3u8 to txt
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时运行一次，可以根据需求修改
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 * * * *'  # 每小时执行一次，可根据需求调整
+  workflow_dispatch:  # 手动触发工作流
 
 jobs:
   convert_m3u8:
@@ -20,26 +20,29 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install requests  # 安装 requests 库，用于获取 m3u8 文件
+        python -m pip install --upgrade pip  # 升级 pip
+        pip install requests  # 安装 requests 库
 
     - name: Download index.m3u8
       run: |
         mkdir -p output  # 创建 output 文件夹
-        curl -o index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8  # 下载 m3u8 文件
+        curl -o output/index.m3u8 http://4gtv.mumi.rip:9877/index.m3u8  # 下载 m3u8 文件
 
     - name: Convert m3u8 to txt
       run: |
         python3 -c '
-import requests
+import os
 
-# 下载 m3u8 文件的内容
-url = "http://4gtv.mumi.rip:9877/index.m3u8"
-response = requests.get(url)
+# 读取 m3u8 文件内容
+m3u8_file_path = "output/index.m3u8"
+with open(m3u8_file_path, "r") as file:
+    m3u8_content = file.read()
 
-# 将内容保存到 output 文件夹中的 txt 文件
-with open("output/index.txt", "w") as file:
-    file.write(response.text)
-        '  # 使用 Python 代码将 m3u8 内容写入 txt 文件
+# 将内容写入 txt 文件
+txt_file_path = "output/index.txt"
+with open(txt_file_path, "w") as txt_file:
+    txt_file.write(m3u8_content)
+        '  # 使用 Python 脚本将 m3u8 内容写入 txt 文件
 
     - name: Upload output files
       uses: actions/upload-artifact@v3
