@@ -51,7 +51,7 @@ KLT-靖天國際台,http://4gtv.mumi.rip:9877/84/4gtv-4gtv063/index.m3u8
 Nice TV 靖天歡樂台,http://4gtv.mumi.rip:9877/119/4gtv-4gtv054/index.m3u8
 靖天資訊台,http://4gtv.mumi.rip:9877/88/4gtv-4gtv065/index.m3u8
 TVBS歡樂台,http://4gtv.mumi.rip:9877/184/4gtv-4gtv068/index.m3u8
-韓國娛樂台 KMTV,http://4gtv.mumi.rip:9877/76/4gtv-live377/index.m3u8
+韓國娛樂台 KMTV,http://4gtv.mumi.rip:9877/446/4gtv-4gtv016/index.m3u8
 ROCK Entertainment,http://4gtv.mumi.rip:9877/275/4gtv-live080/index.m3u8
 Lifetime 娛樂頻道,http://4gtv.mumi.rip:9877/217/4gtv-live029/index.m3u8
 電影原聲台CMusic,http://4gtv.mumi.rip:9877/218/4gtv-live031/index.m3u8
