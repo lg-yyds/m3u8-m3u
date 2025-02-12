@@ -45,9 +45,9 @@ http://4gtv.mumi.rip:9877/188/4gtv-live030/index.m3u8
 http://4gtv.mumi.rip:9877/11/4gtv-4gtv018/index.m3u8
 #EXTINF:-1,tvg-id="litv-longturn20" tvg-name="ELTV生活英語台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn20_mobile.png",ELTV生活英語台
 http://4gtv.mumi.rip:9877/106/litv-longturn20/index.m3u8
-#EXTINF:-1,tvg-id="4gtv-live032" tvg-name="Nick Jr. 兒童頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/4gtv_4gtv-live032_mobile.png",Nick Jr. 兒童頻道
+#EXTINF:-1,tvg-id="4gtv-live032" tvg-name="Nick Jr. 兒童頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live032_mobile.png",Nick Jr. 兒童頻道
 http://4gtv.mumi.rip:9877/219/4gtv-live032/index.m3u8
-#EXTINF:-1,tvg-id="4gtv-live105" tvg-name="尼克兒童頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/4gtv_4gtv-live105_mobile.png",尼克兒童頻道
+#EXTINF:-1,tvg-id="4gtv-live105" tvg-name="尼克兒童頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live105_mobile.png",尼克兒童頻道
 http://4gtv.mumi.rip:9877/185/4gtv-live105/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live017" tvg-name="DreamWorks 夢工廠動畫" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live017_mobile.png",DreamWorks 夢工廠動畫
 http://4gtv.mumi.rip:9877/282/4gtv-live017/index.m3u8
@@ -145,7 +145,7 @@ http://4gtv.mumi.rip:9877/250/4gtv-4gtv076/index.m3u8
 http://4gtv.mumi.rip:9877/274/4gtv-live011/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live206" tvg-name="幸福空間居家台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live206_mobile.png",幸福空間居家台
 http://4gtv.mumi.rip:9877/168/4gtv-live206/index.m3u8
-#EXTINF:-1,tvg-id="4gtv-live208" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live208_mobile.png",Love Nature
+#EXTINF:-1,tvg-id="4gtv-live208" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live208_mobile.png",Love Nature
 http://4gtv.mumi.rip:9877/139/4gtv-live208/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live026" tvg-name="History 歷史頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live026_mobile.png",History 歷史頻道
 http://4gtv.mumi.rip:9877/214/4gtv-live026/index.m3u8
