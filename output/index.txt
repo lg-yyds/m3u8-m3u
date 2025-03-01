@@ -60,6 +60,7 @@ MTV Live HD 音樂頻道,http://4gtv.mumi.rip:9877/213/4gtv-live025/index.m3u8
 Mezzo Live HD,http://4gtv.mumi.rip:9877/79/4gtv-4gtv083/index.m3u8
 CLASSICA 古典樂,http://4gtv.mumi.rip:9877/80/4gtv-4gtv059/index.m3u8
 東森購物三台,http://4gtv.mumi.rip:9877/287/4gtv-live048/index.m3u8
+INULTRA,http://4gtv.mumi.rip:9877/444/4gtv-live096/index.m3u8
 TRACE Sport Stars,http://4gtv.mumi.rip:9877/57/4gtv-4gtv077/index.m3u8
 智林體育台,http://4gtv.mumi.rip:9877/58/4gtv-4gtv101/index.m3u8
 時尚運動X,http://4gtv.mumi.rip:9877/69/4gtv-4gtv014/index.m3u8
@@ -76,6 +77,7 @@ History 歷史頻道,http://4gtv.mumi.rip:9877/214/4gtv-live026/index.m3u8
 愛爾達生活旅遊台,http://4gtv.mumi.rip:9877/237/4gtv-live120/index.m3u8
 LUXE TV Channel,http://4gtv.mumi.rip:9877/175/4gtv-live121/index.m3u8
 TV5MONDE STYLE HD 生活時尚,http://4gtv.mumi.rip:9877/178/4gtv-live122/index.m3u8
+MagellanTV頻道 (麥哲倫頻道) ,http://4gtv.mumi.rip:9877/450/4gtv-live123/index.m3u8
 公視戲劇,http://4gtv.mumi.rip:9877/7/4gtv-4gtv042/index.m3u8
 民視影劇台,http://4gtv.mumi.rip:9877/24/litv-ftv09/index.m3u8
 HITS頻道,http://4gtv.mumi.rip:9877/186/4gtv-live620/index.m3u8

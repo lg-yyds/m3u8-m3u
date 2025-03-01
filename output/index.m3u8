@@ -123,6 +123,8 @@ http://4gtv.mumi.rip:9877/79/4gtv-4gtv083/index.m3u8
 http://4gtv.mumi.rip:9877/80/4gtv-4gtv059/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live048" tvg-name="東森購物三台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png",東森購物三台
 http://4gtv.mumi.rip:9877/287/4gtv-live048/index.m3u8
+#EXTINF:-1,tvg-id="4gtv-live096" tvg-name="INULTRA" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_INULTRA_mobile.png",INULTRA
+http://4gtv.mumi.rip:9877/444/4gtv-live096/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-4gtv077" tvg-name="TRACE Sport Stars" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv077_mobile.png",TRACE Sport Stars
 http://4gtv.mumi.rip:9877/57/4gtv-4gtv077/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-4gtv101" tvg-name="智林體育台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv101_mobile.png",智林體育台
@@ -155,6 +157,8 @@ http://4gtv.mumi.rip:9877/237/4gtv-live120/index.m3u8
 http://4gtv.mumi.rip:9877/175/4gtv-live121/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-live122" tvg-name="TV5MONDE STYLE HD 生活時尚" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live122_mobile.png",TV5MONDE STYLE HD 生活時尚
 http://4gtv.mumi.rip:9877/178/4gtv-live122/index.m3u8
+#EXTINF:-1,tvg-id="4gtv-live123" tvg-name="MagellanTV頻道 (麥哲倫頻道) " tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_MGTV_mobile.png",MagellanTV頻道 (麥哲倫頻道) 
+http://4gtv.mumi.rip:9877/450/4gtv-live123/index.m3u8
 #EXTINF:-1,tvg-id="4gtv-4gtv042" tvg-name="公視戲劇" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv042_mobile.png",公視戲劇
 http://4gtv.mumi.rip:9877/7/4gtv-4gtv042/index.m3u8
 #EXTINF:-1,tvg-id="litv-ftv09" tvg-name="民視影劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv09_mobile.png",民視影劇台
